@@ -22,13 +22,14 @@ Thumbs.db
 # Python cache
 .pytest_cache/
 .mypy_cache/
+__pycache__/
 
 # Build
 build/
 dist/
 *.egg-info/
 
-# Generated analysis artifacts
+# Generated project outputs
 analysis_outputs/
 dataset/aligned_daily_metrics.csv
 dataset/overall_daily_metrics.csv

@@ -29,52 +29,23 @@ pip install -r requirements.txt
 
 ## How to Run
 
-### Step 1
-
-Run preprocessing
+### Option 1: Run the full pipeline
 
 ```bash
 python main.py
-```
-
-This generates the cleaned and aligned daily datasets.
-
----
-
-### Step 2
-
-Run analysis
-
-```bash
 python analysis.py
-```
-
-This generates
-
-- summary tables
-- charts
-- trader segmentation
-
-Outputs are saved in
-
-```
-analysis_outputs/
-```
-
----
-
-### Step 3 (Optional)
-
-Run strategy recommendations and predictive model
-
-```bash
 python strategy.py
 ```
 
-This prints
+This generates the cleaned datasets, analysis outputs, charts, and a simple sentiment-based backtest.
 
-- strategy recommendations
-- Random Forest prediction accuracy
+### Option 2: Run everything with one command
+
+```bash
+python -m pytest
+```
+
+The test suite checks the new strategy functions and the backtest logic.
 
 ---
 
@@ -87,6 +58,20 @@ Generated files include
 - sentiment_summary.csv
 - behavior_summary.csv
 - segment tables
+- strategy_backtest.csv
+
+---
+
+## Outputs
+
+Generated files include
+
+- sentiment_comparison.png
+- segment_comparison.png
+- sentiment_summary.csv
+- behavior_summary.csv
+- segment tables
+- strategy_backtest.csv
 
 ---
 
@@ -95,3 +80,4 @@ Generated files include
 - Pandas
 - Matplotlib
 - Scikit-Learn
+
